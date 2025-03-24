@@ -13,6 +13,7 @@ export default function Navigation() {
 
   const navItems = [
     { name: "Home", href: "/" },
+    { name: "Dashboard", href: "/dashboard" },
     { name: "Booking", href: "/booking" },
     { name: "Map", href: "/map" },
     { name: "Help", href: "/help" },
@@ -34,6 +35,7 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
+                prefetch={true}
                 className="text-sm font-medium hover:text-primary transition-colors"
               >
                 {item.name}
@@ -68,6 +70,7 @@ export default function Navigation() {
                     <Link
                       key={item.name}
                       href={item.href}
+                      prefetch={true}
                       className="text-lg font-medium hover:text-primary transition-colors px-2 py-1"
                       onClick={() => setIsOpen(false)}
                     >
